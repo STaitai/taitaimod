@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">buildscript {</span>
+    <span class="s0">repositories {</span>
+        <span class="s0">maven { url = </span><span class="s1">'https://maven.minecraftforge.net' </span><span class="s0">}</span>
+        <span class="s0">mavenCentral()</span>
+    <span class="s0">}</span>
+    <span class="s0">dependencies {</span>
+        <span class="s0">classpath group: </span><span class="s1">'net.minecraftforge.gradle'</span><span class="s0">, name: </span><span class="s1">'ForgeGradle'</span><span class="s0">, version: </span><span class="s1">'5.1.+'</span><span class="s0">, changing: </span><span class="s2">true</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+<span class="s0">apply plugin: </span><span class="s1">'net.minecraftforge.gradle'</span>
+<span class="s3">// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.</span>
+<span class="s0">apply plugin: </span><span class="s1">'eclipse'</span>
+<span class="s0">apply plugin: </span><span class="s1">'maven-publish'</span>
+
+<span class="s0">version = </span><span class="s1">'1.0'</span>
+<span class="s0">group = </span><span class="s1">'com.yourname.modid' </span><span class="s3">// http://maven.apache.org/guides/mini/guide-naming-conventions.html</span>
+<span class="s0">archivesBaseName = </span><span class="s1">'modid'</span>
+
+<span class="s0">java.toolchain.languageVersion = JavaLanguageVersion.of(</span><span class="s4">8</span><span class="s0">) </span><span class="s3">// Mojang ships Java 8 to end users, so your mod should target Java 8.</span>
+
+<span class="s0">println(</span><span class="s1">'Java: ' </span><span class="s0">+ System.getProperty(</span><span class="s1">'java.version'</span><span class="s0">) + </span><span class="s1">' JVM: ' </span><span class="s0">+ System.getProperty(</span><span class="s1">'java.vm.version'</span><span class="s0">) + </span><span class="s1">'(' </span><span class="s0">+ System.getProperty(</span><span class="s1">'java.vendor'</span><span class="s0">) + </span><span class="s1">') Arch: ' </span><span class="s0">+ System.getProperty(</span><span class="s1">'os.arch'</span><span class="s0">))</span>
+<span class="s0">minecraft {</span>
+    <span class="s3">// The mappings can be changed at any time, and must be in the following format.</span>
+    <span class="s3">// Channel:   Version:</span>
+    <span class="s3">// snapshot   YYYYMMDD   Snapshot are built nightly.</span>
+    <span class="s3">// stable     #          Stables are built at the discretion of the MCP team.</span>
+    <span class="s3">// official   MCVersion  Official field/method names from Mojang mapping files</span>
+    <span class="s3">//</span>
+    <span class="s3">// You must be aware of the Mojang license when using the 'official' mappings.</span>
+    <span class="s3">// See more information here: https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md</span>
+    <span class="s3">//</span>
+    <span class="s3">// Use non-default mappings at your own risk. they may not always work.</span>
+    <span class="s3">// Simply re-run your setup task after changing the mappings to update your workspace.</span>
+    <span class="s0">mappings channel: </span><span class="s1">'official'</span><span class="s0">, version: </span><span class="s1">'1.16.5'</span>
+    <span class="s3">// makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.</span>
+    
+    <span class="s3">// accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')</span>
+
+    <span class="s3">// Default run configurations.</span>
+    <span class="s3">// These can be tweaked, removed, or duplicated as needed.</span>
+    <span class="s0">runs {</span>
+        <span class="s0">client {</span>
+            <span class="s0">workingDirectory project.file(</span><span class="s1">'run'</span><span class="s0">)</span>
+
+            <span class="s3">// Recommended logging data for a userdev environment</span>
+            <span class="s3">// The markers can be changed as needed.</span>
+            <span class="s3">// &quot;SCAN&quot;: For mods scan.</span>
+            <span class="s3">// &quot;REGISTRIES&quot;: For firing of registry events.</span>
+            <span class="s3">// &quot;REGISTRYDUMP&quot;: For getting the contents of all registries.</span>
+            <span class="s0">property </span><span class="s1">'forge.logging.markers'</span><span class="s0">, </span><span class="s1">'REGISTRIES'</span>
+
+            <span class="s3">// Recommended logging level for the console</span>
+            <span class="s3">// You can set various levels here.</span>
+            <span class="s3">// Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels</span>
+            <span class="s0">property </span><span class="s1">'forge.logging.console.level'</span><span class="s0">, </span><span class="s1">'debug'</span>
+
+            <span class="s0">mods {</span>
+                <span class="s0">examplemod {</span>
+                    <span class="s0">source sourceSets.main</span>
+                <span class="s0">}</span>
+            <span class="s0">}</span>
+        <span class="s0">}</span>
+
+        <span class="s0">server {</span>
+            <span class="s0">workingDirectory project.file(</span><span class="s1">'run'</span><span class="s0">)</span>
+
+            <span class="s3">// Recommended logging data for a userdev environment</span>
+            <span class="s3">// The markers can be changed as needed.</span>
+            <span class="s3">// &quot;SCAN&quot;: For mods scan.</span>
+            <span class="s3">// &quot;REGISTRIES&quot;: For firing of registry events.</span>
+            <span class="s3">// &quot;REGISTRYDUMP&quot;: For getting the contents of all registries.</span>
+            <span class="s0">property </span><span class="s1">'forge.logging.markers'</span><span class="s0">, </span><span class="s1">'REGISTRIES'</span>
+
+            <span class="s3">// Recommended logging level for the console</span>
+            <span class="s3">// You can set various levels here.</span>
+            <span class="s3">// Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels</span>
+            <span class="s0">property </span><span class="s1">'forge.logging.console.level'</span><span class="s0">, </span><span class="s1">'debug'</span>
+
+            <span class="s0">mods {</span>
+                <span class="s0">examplemod {</span>
+                    <span class="s0">source sourceSets.main</span>
+                <span class="s0">}</span>
+            <span class="s0">}</span>
+        <span class="s0">}</span>
+
+        <span class="s0">data {</span>
+            <span class="s0">workingDirectory project.file(</span><span class="s1">'run'</span><span class="s0">)</span>
+
+            <span class="s3">// Recommended logging data for a userdev environment</span>
+            <span class="s3">// The markers can be changed as needed.</span>
+            <span class="s3">// &quot;SCAN&quot;: For mods scan.</span>
+            <span class="s3">// &quot;REGISTRIES&quot;: For firing of registry events.</span>
+            <span class="s3">// &quot;REGISTRYDUMP&quot;: For getting the contents of all registries.</span>
+            <span class="s0">property </span><span class="s1">'forge.logging.markers'</span><span class="s0">, </span><span class="s1">'REGISTRIES'</span>
+
+            <span class="s3">// Recommended logging level for the console</span>
+            <span class="s3">// You can set various levels here.</span>
+            <span class="s3">// Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels</span>
+            <span class="s0">property </span><span class="s1">'forge.logging.console.level'</span><span class="s0">, </span><span class="s1">'debug'</span>
+
+            <span class="s3">// Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.</span>
+            <span class="s0">args </span><span class="s1">'--mod'</span><span class="s0">, </span><span class="s1">'examplemod'</span><span class="s0">, </span><span class="s1">'--all'</span><span class="s0">, </span><span class="s1">'--output'</span><span class="s0">, file(</span><span class="s1">'src/generated/resources/'</span><span class="s0">), </span><span class="s1">'--existing'</span><span class="s0">, file(</span><span class="s1">'src/main/resources/'</span><span class="s0">)</span>
+
+            <span class="s0">mods {</span>
+                <span class="s0">examplemod {</span>
+                    <span class="s0">source sourceSets.main</span>
+                <span class="s0">}</span>
+            <span class="s0">}</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s3">// Include resources generated by data generators.</span>
+<span class="s0">sourceSets.main.resources { srcDir </span><span class="s1">'src/generated/resources' </span><span class="s0">}</span>
+
+<span class="s0">dependencies {</span>
+    <span class="s3">// Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed</span>
+    <span class="s3">// that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.</span>
+    <span class="s3">// The userdev artifact is a special name and will get all sorts of transformations applied to it.</span>
+    <span class="s0">minecraft </span><span class="s1">'net.minecraftforge:forge:1.16.5-36.2.20'</span>
+
+    <span class="s3">// You may put jars on which you depend on in ./libs or you may define them like so..</span>
+    <span class="s3">// compile &quot;some.group:artifact:version:classifier&quot;</span>
+    <span class="s3">// compile &quot;some.group:artifact:version&quot;</span>
+
+    <span class="s3">// Real examples</span>
+    <span class="s3">// compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env</span>
+    <span class="s3">// compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env</span>
+
+    <span class="s3">// The 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.</span>
+    <span class="s3">// provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'</span>
+
+    <span class="s3">// These dependencies get remapped to your current MCP mappings</span>
+    <span class="s3">// deobf 'com.mod-buildcraft:buildcraft:6.0.8:dev'</span>
+
+    <span class="s3">// For more info...</span>
+    <span class="s3">// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html</span>
+    <span class="s3">// http://www.gradle.org/docs/current/userguide/dependency_management.html</span>
+
+<span class="s0">}</span>
+
+<span class="s3">// Example for how to get properties into the manifest for reading by the runtime..</span>
+<span class="s0">jar {</span>
+    <span class="s0">manifest {</span>
+        <span class="s0">attributes([</span>
+            <span class="s1">&quot;Specification-Title&quot;</span><span class="s0">: </span><span class="s1">&quot;examplemod&quot;</span><span class="s0">,</span>
+            <span class="s1">&quot;Specification-Vendor&quot;</span><span class="s0">: </span><span class="s1">&quot;examplemodsareus&quot;</span><span class="s0">,</span>
+            <span class="s1">&quot;Specification-Version&quot;</span><span class="s0">: </span><span class="s1">&quot;1&quot;</span><span class="s0">, </span><span class="s3">// We are version 1 of ourselves</span>
+            <span class="s1">&quot;Implementation-Title&quot;</span><span class="s0">: project.name,</span>
+            <span class="s1">&quot;Implementation-Version&quot;</span><span class="s0">: </span><span class="s1">&quot;</span><span class="s0">${version}</span><span class="s1">&quot;</span><span class="s0">,</span>
+            <span class="s1">&quot;Implementation-Vendor&quot; </span><span class="s0">:</span><span class="s1">&quot;examplemodsareus&quot;</span><span class="s0">,</span>
+            <span class="s1">&quot;Implementation-Timestamp&quot;</span><span class="s0">: </span><span class="s2">new </span><span class="s0">Date().format(</span><span class="s1">&quot;yyyy-MM-dd'T'HH:mm:ssZ&quot;</span><span class="s0">)</span>
+        <span class="s0">])</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s3">// Example configuration to allow publishing using the maven-publish task</span>
+<span class="s3">// This is the preferred method to reobfuscate your jar file</span>
+<span class="s0">jar.finalizedBy(</span><span class="s1">'reobfJar'</span><span class="s0">) </span>
+<span class="s3">// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing</span>
+<span class="s3">//publish.dependsOn('reobfJar')</span>
+
+<span class="s0">publishing {</span>
+    <span class="s0">publications {</span>
+        <span class="s0">mavenJava(MavenPublication) {</span>
+            <span class="s0">artifact jar</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+    <span class="s0">repositories {</span>
+        <span class="s0">maven {</span>
+            <span class="s0">url </span><span class="s1">&quot;file:///</span><span class="s0">${project.projectDir}</span><span class="s1">/mcmodsrepo&quot;</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

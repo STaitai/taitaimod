@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "taitaimod:block/nether_gate",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "taitaimod:block/nether_gate"
+    },
+    "facing=south": {
+      "model": "taitaimod:block/nether_gate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "taitaimod:block/nether_gate",
+      "y": 270
+    }
+  }
+}

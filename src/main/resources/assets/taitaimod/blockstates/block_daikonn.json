@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "taitaimod:block/block_daikonn_stage0"
+    },
+    "age=1": {
+      "model": "taitaimod:block/block_daikonn_stage0"
+    },
+    "age=2": {
+      "model": "taitaimod:block/block_daikonn_stage1"
+    },
+    "age=3": {
+      "model": "taitaimod:block/block_daikonn_stage1"
+    },
+    "age=4": {
+      "model": "taitaimod:block/block_daikonn_stage2"
+    },
+    "age=5": {
+      "model": "taitaimod:block/block_daikonn_stage2"
+    },
+    "age=6": {
+      "model": "taitaimod:block/block_daikonn_stage2"
+    },
+    "age=7": {
+      "model": "taitaimod:block/block_daikonn_stage3"
+    }
+  }
+}

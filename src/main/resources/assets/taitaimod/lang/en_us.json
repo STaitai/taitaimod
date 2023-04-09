@@ -1,0 +1,48 @@
+{
+  "itemGroup.taitaimod" : "Taitai Mod",
+
+  "item.taitaimod.tngot" : "Tngot",
+  "item.taitaimod.tfood" : "Tapple",
+  "item.taitaimod.tfood.desc" : "syokuryoudesu",
+  "item.taitaimod.tpickaxe" : "TPickaxe",
+  "item.taitaimod.tsword" : "TSword",
+  "item.taitaimod.taxe" : "TAxe",
+  "item.taitiamod.tshovel" : "TShovel",
+  "item.taitaimod.taitai_helmet" : "THelmet",
+  "item.taitaimod.taitai_chestplate" : "TChestplate",
+  "item.taitaimod.taitai_leggings" : "TLeggings",
+  "item.taitaimod.taitai_boots" : "TBoots",
+  "item.taitaimod.tgun" : "TGun",
+  "item.taitaimod.tammo" : "GunAmmo",
+  "item.taitaimod.stgun" : "STGun",
+  "item.taitaimod.stammo" : "GunAmmo",
+  "item.taitaimod.taitai_akuma_egg" : "TAkumaSpawnEgg",
+  "item.taitaimod.mawaru" : "Mawaru",
+  "item.taitaimod.game_mode" : "GameControl",
+  "item.taitaimod.teleport_lot" : "TeleportLot",
+  "item.taitaimod.enchant_lot" : "EnchantLot",
+  "item.taitaimod.enchant" : "Enchant 5",
+  "item.taitaimod.enchant50" : "エンチャント 50",
+  "item.taitaimod.ts_gun" : "TShotGun",
+
+  "item.taitaimod.teleport_lot.desc" : "8 teleport",
+
+
+  "block.taitaimod.tglass" : "TGlass",
+  "block.taitaimod.tglass2" : "TCheatGlass",
+  "block.taitaimod.taitai_tnt" : "TTNT",
+  "block.taitaimod.taitai_tnt_2" : "TTNT2",
+  "block.taitaimod.switch" : "Switch",
+  "block.taitaimod.taitai_glow_stone" : "TGlowStone",
+  "block.taitaimod.taitai_crafting_table" : "TCraftingTable",
+
+  "key.taitaimod.tool_mode" : "ToolMode",
+
+  "key.category.taitaimod" : "TaitaiMod",
+
+  "entity.taitaimod.taitai_akuma" : "TAkuma",
+
+  "effect.taitaimod.effect_scope" : "Scope",
+  "effect.taitaimod.effect_null_damage" : "NullFallDamage"
+
+}

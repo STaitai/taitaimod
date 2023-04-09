@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "taitaimod:block/taitai_tnt_top",
+    "bottom": "taitaimod:block/taitai_tnt_bottom",
+    "side": "taitaimod:block/taitai_tnt_side"
+  }
+}

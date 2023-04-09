@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "taitaimod:block/taitai_crafting_table_front",
+    "north": "taitaimod:block/taitai_crafting_table_front",
+    "south": "taitaimod:block/taitai_crafting_table_side",
+    "east": "taitaimod:block/taitai_crafting_table_side",
+    "west": "taitaimod:block/taitai_crafting_table_front",
+    "up": "taitaimod:block/taitai_crafting_table_top",
+    "down": "taitaimod:block/oak_planks"
+  }
+}

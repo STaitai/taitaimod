@@ -1,0 +1,65 @@
+{
+  "itemGroup.taitaimod" : "たいたいMod",
+
+  "item.taitaimod.tngot" : "Tの延べ棒",
+  "item.taitaimod.tfood" : "Tのリンゴ",
+  "item.taitaimod.tpickaxe" : "Tツルハシ",
+  "item.taitaimod.tsword" : "Tの剣",
+  "item.taitaimod.taxe" : "T斧",
+  "item.taitaimod.tshovel" : "Tシャベル",
+  "item.taitaimod.taitai_helmet" : "Tヘルメット",
+  "item.taitaimod.taitai_chestplate" : "Tチェストプレート",
+  "item.taitaimod.taitai_leggings" : "Tレギンス",
+  "item.taitaimod.taitai_boots" : "Tブーツ",
+  "item.taitaimod.tgun" : "Tアサルトライフル",
+  "item.taitaimod.tammo" : "アサルトライフ, ショットガン弾",
+  "item.taitaimod.stgun" : "Tスナイパー",
+  "item.taitaimod.stammo" : "スナイパー弾",
+  "item.taitaimod.taitai_akuma_egg" : "T悪魔のスポーンエッグ",
+  "item.taitaimod.mawaru" : "回る",
+  "item.taitaimod.game_mode" : "ゲームコントローラー",
+  "item.taitaimod.teleport_lot" : "テレポートロット",
+  "item.taitaimod.enchant_lot" : "エンチャントロット",
+  "item.taitaimod.enchant" : "エンチャント 5",
+  "item.taitaimod.enchant50" : "エンチャント 50",
+  "item.taitaimod.ts_gun" : "Tショットガン",
+  "item.taitaimod.ptgun" : "貫通銃",
+  "item.taitaimod.taitai_potion" : "落下ダメージ無効のポーション",
+  "item.taitaimod.creeper" : "爆発の元",
+  "item.taitaimod.op_get" : "OPLoot",
+  "item.taitaimod.fly_armor" : "飛べるヘルメット",
+
+
+
+  "item.taitaimod.tfood.desc" : "毒リンゴではありません。",
+  "item.taitaimod.teleport_lot.desc" : "右クリックで8マス先にテレポートします。",
+
+
+  "block.taitaimod.tblock" : "Tブロック",
+  "block.taitaimod.tglass" : "Tガラス",
+  "block.taitaimod.tglass2" : "Tチートガラス",
+  "block.taitaimod.taitai_tnt" : "TTNT",
+  "block.taitaimod.taitai_tnt_2" : "TTNT2",
+  "block.taitaimod.switch" : "Switch",
+  "block.taitaimod.taitai_glow_stone" : "Tグローストーン",
+  "block.taitaimod.taitai_crafting_table" : "Tの作業台",
+  "block.taitaimod.figure" : "T像",
+  "block.taitaimod.put" : "壊れるブロック",
+  "block.taitaimod.nether_gate" : "ネザーゲートブロック",
+  "block.taitaimod.end_gate" : "エンドゲートブロック",
+
+
+
+
+  "key.taitaimod.tool_mode" : "スコープ",
+  "key.taitaimod.change_fly_speed" : "チェンジフライスピード",
+  "key.taitaimod.item_recovery" : "アイテムダメージ回復",
+
+
+  "key.category.taitaimod" : "TaitaiMod",
+
+  "entity.taitaimod.taitai_akuma" : "T悪魔",
+
+  "effect.taitaimod.effect_scope" : "スコープ",
+  "effect.taitaimod.effect_null_damage" : "落下ダメージ無効"
+}
